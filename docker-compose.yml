@@ -2,9 +2,7 @@ version: "3.3"  # optional since v1.27.0
 services:
   linux:
     build: .
-    ports:
-      - "5000:5000"
+    # ports:
+    #   - "5000:5000"
     volumes:
-      - develop:/develop
-volumes:
-  develop: 
+      - ./develop:/develop
