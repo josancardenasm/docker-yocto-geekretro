@@ -21,8 +21,11 @@ RUN apt-get install -y gawk wget git git-core diffstat unzip texinfo gcc-multili
     build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
     xz-utils debianutils iputils-ping libsdl1.2-dev xterm repo
 
-# Download repositories
-# RUN mkdir yocto
-# RUN git clone git://git.yoctoproject.org/poky yocto --branch dunfell -v
+#set default version of python to 3
+RUN ln -f -s /usr/bin/python3 /usr/bin/python
+
+#Copy your git configuration
+COPY files/.gitconfig /root/.gitconfig
+
 
 
